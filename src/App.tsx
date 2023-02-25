@@ -1,24 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
 
 function App() {
+  const callMovies = async () => {
+    console.log("loading movies...");
+    await fetch(
+      "https://api.themoviedb.org/3/movie/popular?api_key=f12e083657fb7b8262dd48b5850271b3"
+    )
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+    console.log("movies loaded");
+  };
+
+  useEffect(() => {
+    callMovies();
+    // MOVIES CALL
+    /* fetch(
+      "https://api.themoviedb.org/3/movie/popular?api_key=f12e083657fb7b8262dd48b5850271b3"
+    )
+      .then((res) => res.json())
+      .then((data) => console.log(data)); */
+    // CONFIGURATION CALL
+    /* fetch(
+      "https://api.themoviedb.org/3/configuration?api_key=f12e083657fb7b8262dd48b5850271b3"
+    )
+      .then((res) => res.json())
+      .then((data) => console.log(data)); */
+    // SHOWS CALL
+    /* fetch(
+      "https://api.themoviedb.org/3/tv/popular?api_key=f12e083657fb7b8262dd48b5850271b3"
+    )
+      .then((res) => res.json())
+      .then((data) => console.log(data)); */
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>React App</h1>
     </div>
   );
 }
