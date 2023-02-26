@@ -39,8 +39,6 @@ export interface MediaState {
   mediaType: "show" | "movie";
   movies: movie[];
   shows: show[];
-  isBodyLoading: boolean;
-  isModalLoading: boolean;
   isModalOpen: boolean;
   selectedItem: any;
 }

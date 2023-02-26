@@ -6,8 +6,6 @@ const initialState: MediaState = {
   mediaType: "show",
   movies: [],
   shows: [],
-  isBodyLoading: false,
-  isModalLoading: false,
   isModalOpen: false,
   selectedItem: {},
 };
@@ -25,12 +23,6 @@ export const mediaSlice = createSlice({
     setShows: (state, action) => {
       state.shows = action.payload;
     },
-    setIsBodyLoading: (state, action) => {
-      state.isBodyLoading = action.payload;
-    },
-    setIsModalLoading: (state, action) => {
-      state.isModalLoading = action.payload;
-    },
     setIsModalOpen: (state, action) => {
       state.isModalOpen = action.payload;
     },
@@ -44,8 +36,6 @@ export const {
   setMediaType,
   setMovies,
   setShows,
-  setIsBodyLoading,
-  setIsModalLoading,
   setIsModalOpen,
   setSelectedItem,
 } = mediaSlice.actions;

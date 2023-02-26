@@ -1,17 +1,25 @@
 import React from "react";
 
 import { Grid, Typography } from "@mui/material";
+import { useDispatch } from "react-redux";
 
 import { movie } from "../../helpers/types";
+import { setSelectedItem, setIsModalOpen } from "../../redux/mediaSlice";
 
 type Props = {
   element: movie;
 };
 
 const MovieRow = ({ element }: Props) => {
+  const dispatch = useDispatch();
+  const handleClick = () => {
+    dispatch(setSelectedItem(element));
+    dispatch(setIsModalOpen(true));
+  };
   return (
     <Grid
       container
+      onClick={handleClick}
       sx={{
         margin: "2px",
         padding: "8px",
