@@ -9,6 +9,7 @@ import { RootState } from "../../redux/store";
 import MovieRow from "./MovieRow";
 import ShowRow from "./ShowRow";
 import { useFetchMovies, useFetchShows } from "./bodyHelpers";
+import TableHeaders from "./TableHeaders";
 
 const Body = () => {
   const mediaType = useSelector((state: RootState) => state.media.mediaType);
@@ -21,8 +22,14 @@ const Body = () => {
   useFetchShows(calledShows);
 
   return (
-    <Stack sx={{ width: "100%", padding: "80px" }}>
-      <Typography>{mediaType}</Typography>
+    <Stack sx={{ width: "80%", padding: "80px" }}>
+      <Typography
+        color="#40291a"
+        variant="h1"
+        marginBottom="48px"
+      >{`World's top 20 popular ${mediaType}s`}</Typography>
+
+      <TableHeaders mediaType={mediaType} />
 
       {mediaType === "movie" &&
         movies.map((movie) => <MovieRow key={movie.id} element={movie} />)}
