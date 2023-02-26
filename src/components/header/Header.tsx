@@ -2,28 +2,43 @@ import React from "react";
 
 import { Stack } from "@mui/system";
 import { Button, Typography } from "@mui/material";
+import { useDispatch } from "react-redux";
 
-const Header = () => (
-  <Stack
-    direction="row"
-    width="100%"
-    justifyContent="space-between"
-    alignItems="center"
-    sx={{ backgroundColor: "#40291a" }}
-  >
-    <Typography variant="h1" sx={{ color: "#fac601" }}>
-      Screenz
-    </Typography>
-    <Stack direction="row" alignItems="center">
-      <Button variant="contained" sx={buttonStyle}>
-        Shows
-      </Button>
-      <Button variant="contained" sx={buttonStyle}>
-        Movies
-      </Button>
+import { setMediaType } from "../../redux/mediaSlice";
+
+const Header = () => {
+  const dispatch = useDispatch();
+
+  return (
+    <Stack
+      direction="row"
+      width="100%"
+      justifyContent="space-between"
+      alignItems="center"
+      sx={{ backgroundColor: "#40291a" }}
+    >
+      <Typography variant="h1" sx={{ color: "#fac601" }}>
+        Screenz
+      </Typography>
+      <Stack direction="row" alignItems="center">
+        <Button
+          variant="contained"
+          sx={buttonStyle}
+          onClick={() => dispatch(setMediaType("show"))}
+        >
+          Shows
+        </Button>
+        <Button
+          variant="contained"
+          sx={buttonStyle}
+          onClick={() => dispatch(setMediaType("movie"))}
+        >
+          Movies
+        </Button>
+      </Stack>
     </Stack>
-  </Stack>
-);
+  );
+};
 
 export default Header;
 
