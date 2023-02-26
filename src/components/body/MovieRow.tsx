@@ -24,7 +24,7 @@ const MovieRow = ({ element }: Props) => {
         margin: "2px",
         padding: "8px",
         borderRadius: "8px",
-        "&:hover": { backgroundColor: "#D2CFC6" },
+        "&:hover": { backgroundColor: "#E76D20" },
       }}
     >
       <Grid xs={4} item alignSelf="center">

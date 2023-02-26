@@ -10,3 +10,7 @@ body {
 h1 {
   margin: 0;
 }
+
+button {
+  font-family: "Just Another Hand", cursive !important;
+}

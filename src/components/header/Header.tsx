@@ -1,10 +1,11 @@
 import React from "react";
 
-import { Stack } from "@mui/system";
-import { Button, Typography } from "@mui/material";
+import { Stack, Box } from "@mui/system";
+import { Button } from "@mui/material";
 import { useDispatch } from "react-redux";
 
 import { setMediaType } from "../../redux/mediaSlice";
+import ScreenzLogo from "./ScreenzLogo";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -14,12 +15,16 @@ const Header = () => {
       direction="row"
       width="100%"
       justifyContent="space-between"
-      alignItems="center"
-      sx={{ backgroundColor: "#40291a" }}
+      /* alignItems="center" */
+      sx={{
+        backgroundColor: "#fac601",
+        width: "100%",
+        padding: "8px 0 0 0 ",
+      }}
     >
-      <Typography variant="h1" sx={{ color: "#fac601" }}>
-        Screenz
-      </Typography>
+      <Box marginLeft="48px">
+        <ScreenzLogo />
+      </Box>
       <Stack direction="row" alignItems="center">
         <Button
           variant="contained"
@@ -43,9 +48,12 @@ const Header = () => {
 export default Header;
 
 const buttonStyle = {
-  height: "32px",
-  width: "160px",
+  height: "48px",
+  width: "184px",
+  color: "#40291a",
+  fontSize: "32px",
   margin: "0 80px 0 40px",
-  backgroundColor: "#e76d20",
-  "&:hover": { backgroundColor: "#B95516" },
+  backgroundColor: "#fac601",
+  boxShadow: "none",
+  "&:hover": { backgroundColor: "#DBAD00" },
 };

@@ -13,7 +13,8 @@ const TableHeaders = ({ mediaType }: { mediaType: string }) => (
       </Typography>
     </Grid>
 
-    <Grid xs={7} item alignSelf="center">
+    <Grid xs={1} item alignSelf="center"></Grid>
+    <Grid xs={6} item alignSelf="center">
       <Typography color="#40291a" variant="h3">
         {capitalizeFirstLetter(mediaType)}
       </Typography>

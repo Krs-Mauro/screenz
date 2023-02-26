@@ -29,11 +29,14 @@ const Body = () => {
 
   return (
     <Stack sx={{ width: "80%", padding: "80px" }}>
-      <Typography
-        color="#40291a"
-        variant="h1"
-        marginBottom="48px"
-      >{`World's top 20 popular ${mediaType}s`}</Typography>
+      <Stack alignItems="center">
+        <Typography
+          color="#40291a"
+          variant="h2"
+          marginBottom="48px"
+          width="fit-content"
+        >{`World's top 20 popular ${mediaType}s`}</Typography>
+      </Stack>
 
       <TableHeaders mediaType={mediaType} />
 
