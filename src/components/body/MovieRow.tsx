@@ -9,6 +9,7 @@ type Props = {
 };
 
 const MovieRow = ({ element }: Props) => {
+  console.log(element);
   return (
     <Stack sx={{ width: "100%" }}>
       <h1>{element.title}</h1>
