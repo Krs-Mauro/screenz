@@ -1,14 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-interface MediaState {
-  mediaType: "show" | "movie";
-  movies: any[];
-  shows: any[];
-  isBodyLoading: boolean;
-  isModalLoading: boolean;
-  isModalOpen: boolean;
-  selectedItem: any;
-}
+import { MediaState } from "../helpers/types";
 
 const initialState: MediaState = {
   mediaType: "show",
