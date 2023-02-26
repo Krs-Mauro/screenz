@@ -1,4 +1,4 @@
-import { movie, show } from "./types";
+import { movie, show } from "../../helpers/types";
 
 const BASE_URL = "http://image.tmdb.org/t/p/";
 const SMALL_BACKDROP_SIZE = "w300";
