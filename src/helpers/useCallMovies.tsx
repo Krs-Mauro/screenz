@@ -11,7 +11,7 @@ const useCallMovies = async () => {
 
   dispatch(setIsBodyLoading(true));
 
-  if (movies.length < 1) {
+  if (movies?.length < 1) {
     const rawData = await fetch(
       "https://api.themoviedb.org/3/movie/popular?api_key=f12e083657fb7b8262dd48b5850271b3"
     );
