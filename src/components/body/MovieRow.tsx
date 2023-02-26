@@ -18,6 +18,7 @@ const MovieRow = ({ element }: Props) => {
   };
   return (
     <Grid
+      data-testid="movieRow"
       container
       onClick={handleClick}
       sx={{

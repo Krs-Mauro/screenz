@@ -18,6 +18,7 @@ const ShowRow = ({ element }: Props) => {
   };
   return (
     <Grid
+      data-testid="showRow"
       container
       onClick={handleClick}
       sx={{

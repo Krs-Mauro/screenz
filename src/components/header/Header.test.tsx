@@ -8,8 +8,8 @@ import ReduxRender from "../../helpers/ReduxRender";
 describe("Tests for the <Header> component", () => {
   it("Renders the app name", () => {
     ReduxRender(<Header />);
-    const appName = screen.getByText(/Screenz/i);
-    expect(appName).toBeInTheDocument();
+    const logo = screen.getByTestId("svgLogo");
+    expect(logo).toBeInTheDocument();
   });
   it("Renders the shows button", () => {
     ReduxRender(<Header />);

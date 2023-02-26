@@ -2,6 +2,7 @@ import React from "react";
 
 const ScreenzLogo = () => (
   <svg
+    data-testid="svgLogo"
     width="641"
     height="150"
     viewBox="100 0 641 212"
@@ -17,9 +18,9 @@ const ScreenzLogo = () => (
     <path
       d="M57.2626 39.3129C67.8372 33.6201 89.5443 23.2327 91.7763 27.2257C94.0084 31.2186 103.416 46.4857 102.512 54.6339M153.924 5.58696L159.105 32.8247L117.659 27.8241L107.841 53.6202"
       stroke="#40291A"
-      stroke-width="4"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="4"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M75.049 58.6309C-24.2862 75.0727 61.4302 61.2216 27.8503 174.981C65.6274 192.95 58.6955 175.862 60.8708 158.269C63.0461 140.676 112.498 149.062 141.992 142.838C171.485 136.614 158.71 150.088 173.568 154.011C188.425 157.933 200.715 170.934 188.184 108.282C175.652 45.6293 174.384 42.1892 75.049 58.6309Z"
@@ -45,7 +46,7 @@ const ScreenzLogo = () => (
       transform="rotate(-10.7703 56.4453 38.2413)"
       fill="#40291A"
       stroke="#40291A"
-      stroke-width="3"
+      strokeWidth="3"
     />
     <circle
       cx="153.219"
@@ -54,7 +55,7 @@ const ScreenzLogo = () => (
       transform="rotate(-10.7703 153.219 5.1075)"
       fill="#40291A"
       stroke="#40291A"
-      stroke-width="3"
+      strokeWidth="3"
     />
   </svg>
 );
