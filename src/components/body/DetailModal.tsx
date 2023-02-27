@@ -6,6 +6,8 @@ import { useSelector } from "react-redux";
 
 import { RootState } from "../../redux/store";
 
+import ModalTabs from "./ModalTabs";
+
 type Props = {
   open: boolean;
   onClose: () => void;
@@ -68,6 +70,7 @@ const DetailModal = ({ open, onClose }: Props) => {
             </Typography>
           </Stack>
         </Stack>
+        <ModalTabs />
       </Stack>
     </Modal>
   );
