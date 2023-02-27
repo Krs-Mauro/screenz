@@ -52,7 +52,7 @@ const buttonStyle = {
   width: "184px",
   color: "#40291a",
   fontSize: "32px",
-  margin: "0 80px 0 40px",
+  margin: "16px",
   backgroundColor: "#fac601",
   boxShadow: "none",
   "&:hover": { backgroundColor: "#DBAD00" },

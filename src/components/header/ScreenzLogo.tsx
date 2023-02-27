@@ -3,9 +3,9 @@ import React from "react";
 const ScreenzLogo = () => (
   <svg
     data-testid="svgLogo"
-    width="641"
+    width="500"
     height="150"
-    viewBox="100 0 641 212"
+    viewBox="50 0 641 212"
     /* height="212"
     viewBox="0 0 834 276" */
     fill="none"
