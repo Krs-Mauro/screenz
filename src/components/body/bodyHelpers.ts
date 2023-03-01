@@ -7,7 +7,7 @@ import { setMovies, setShows } from "../../redux/mediaSlice";
 import { buildShowImageUrls, buildMovieImageUrls } from "./buildImageUrls";
 
 const buildURL = (type: string): string =>
-  `https://api.themoviedb.org/3/${type}/popular?api_key=f12e083657fb7b8262dd48b5850271b3`;
+  `https://api.themoviedb.org/3/${type}/popular?api_key=pleaseContactOwnerForTheKey`;
 
 export const useFetchMovies = async (reference: MutableRefObject<boolean>) => {
   const dispatch = useDispatch();
